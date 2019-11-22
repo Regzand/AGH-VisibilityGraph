@@ -23,7 +23,7 @@ class Segment:
         """ Compares segments so that (p1, p2) == (p2, p1). """
         if not isinstance(other, Segment):
             return False
-        return (self.p1 == other.p1 and self.p1 == other.p1) or (self.p1 == other.p2 and self.p2 == other.p1)
+        return (self.p1 == other.p1 and self.p2 == other.p2) or (self.p1 == other.p2 and self.p2 == other.p1)
 
     def __hash__(self):
         """ Creates hash so that hash(p1, p2) == hash(p2, p1) """

@@ -1,1 +1,2 @@
-from .sweep_line_simple import sweep_line_simple
+from .visibility_graph import visibility_graph
+from .visibility_graph_brute import visibility_graph_brute as visibility_graph

@@ -1,10 +1,9 @@
 import arcade
 
-from app import Display, SegmentsCreateService, PolygonsCreateService, AlgorithmService
-from app.draw_service import DrawService
-from app.points_service import PointsCreateService
-from app.remove_service import RemoveService
-from geometry import Collection, visibility_graph_brute, visibility_graph
+from algorithms import visibility_graph
+from app import Display, SegmentsCreateService, PolygonsCreateService, AlgorithmService, DrawService, \
+    PointsCreateService, RemoveService
+from geometry import Collection
 
 if __name__ == "__main__":
 
@@ -13,7 +12,7 @@ if __name__ == "__main__":
     display = Display(
         'Test',
         [
-            AlgorithmService(collection, visibility_graph),
+            AlgorithmService(arcade.key.U, collection, visibility_graph),
             DrawService(collection),
             PolygonsCreateService(collection),
             SegmentsCreateService(collection),
