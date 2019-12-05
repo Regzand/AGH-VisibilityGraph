@@ -46,7 +46,7 @@ def visible_vertices(point: Point, points: Iterable[Point], segments: Dict[Point
         iterable=(
             seg
             for seg in set(chain(*segments.values()))
-            if intersection(*ray, *seg, restriction_1='ray', restriction_2='segment')
+            if intersection(*ray, *seg, restriction_1='ray', restriction_2='segment') and point not in seg
         ),
         key=status_key(lambda: ray)
     )
